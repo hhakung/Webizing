@@ -3,15 +3,15 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
-    "webiot": "http://schema.webizing.org/",
+    "webiot": "http://schema.iot.webizing.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
       "@id": "webiot:startDate",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        start time ex)2017-09-10T00:00:00+09:00\n                    ",
-      "rdfs:label": "\n                            startDate\n                        ",
+      "rdfs:comment": "start time ex)2017-09-10T00:00:00+09:00",
+      "rdfs:label": "startDate",
       "schema:rangeIncludes": {
         "@id": "schema:DateTime"
       }
@@ -19,8 +19,8 @@
     {
       "@id": "webiot:standHour",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        일어선 시간 - 1: 1시간, 0: 0시간\n                    ",
-      "rdfs:label": "\n                            standHour\n                        ",
+      "rdfs:comment": "일어선 시간 - 1: 1시간, 0: 0시간",
+      "rdfs:label": "standHour",
       "schema:rangeIncludes": {
         "@id": "schema:Float"
       }
@@ -28,8 +28,8 @@
     {
       "@id": "webiot:stepCount",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        걸음 수\n                    ",
-      "rdfs:label": "\n                            stepCount\n                        ",
+      "rdfs:comment": "걸음 수",
+      "rdfs:label": "stepCount",
       "schema:rangeIncludes": {
         "@id": "schema:Integer"
       }
@@ -37,8 +37,8 @@
     {
       "@id": "webiot:heartRate",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        심박수 - unit: count/min\n                    ",
-      "rdfs:label": "\n                            heartRate\n                        ",
+      "rdfs:comment": "심박수 - unit: count/min",
+      "rdfs:label": "heartRate",
       "schema:rangeIncludes": {
         "@id": "schema:Integer"
       }
@@ -46,7 +46,7 @@
     {
       "@id": "webiot:SmartWatch",
       "@type": "rdfs:Class",
-      "rdfs:comment": "\n            SmartWatch Sensor - 걸음 수, 심박, 운동시간, 일어서 있는 시간 로깅 ex)Fitbit, AppleWatch\n        ",
+      "rdfs:comment": "SmartWatch Sensor - 걸음 수, 심박, 운동시간, 일어서 있는 시간 로깅 ex)Fitbit, AppleWatch",
       "rdfs:label": "SmartWatch",
       "schema:sameAs": {
         "@id": "webiot:SmartWatch"
@@ -55,8 +55,8 @@
     {
       "@id": "webiot:address",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8\n                    ",
-      "rdfs:label": "\n                            address\n                        ",
+      "rdfs:comment": "building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8",
+      "rdfs:label": "address",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }
@@ -64,8 +64,8 @@
     {
       "@id": "webiot:location",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        location of the sensor - format: free\n                    ",
-      "rdfs:label": "\n                            location\n                        ",
+      "rdfs:comment": "location of the sensor - format: free",
+      "rdfs:label": "location",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }
@@ -73,8 +73,8 @@
     {
       "@id": "webiot:user",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm\n                    ",
-      "rdfs:label": "\n                            user\n                        ",
+      "rdfs:comment": "user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm",
+      "rdfs:label": "user",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }
@@ -82,8 +82,8 @@
     {
       "@id": "webiot:exerciseTime",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        운동시간 - unit: minute\n                    ",
-      "rdfs:label": "\n                            exerciseTime\n                        ",
+      "rdfs:comment": "운동시간 - unit: minute",
+      "rdfs:label": "exerciseTime",
       "schema:rangeIncludes": {
         "@id": "schema:Float"
       }
@@ -91,8 +91,8 @@
     {
       "@id": "webiot:endDate",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        sleep end time ex)2017-09-10T06:30:00+09:00\n                    ",
-      "rdfs:label": "\n                            endDate\n                        ",
+      "rdfs:comment": "sleep end time ex)2017-09-10T06:30:00+09:00",
+      "rdfs:label": "endDate",
       "schema:rangeIncludes": {
         "@id": "schema:DateTime"
       }
@@ -100,8 +100,8 @@
     {
       "@id": "webiot:time",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        time at which the data measurement was made - ex)\"2017-05-30T18:54:20+09:00\"\n                    ",
-      "rdfs:label": "\n                            time\n                        ",
+      "rdfs:comment": "time at which the data measurement was made - ex)2017-05-30T18:54:20+09:00",
+      "rdfs:label": "time",
       "schema:rangeIncludes": {
         "@id": "schema:DateTime"
       }
@@ -109,8 +109,8 @@
     {
       "@id": "webiot:name",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        name of the sensor - format: SensorXX ex)Foobot00, Beddit02\n                    ",
-      "rdfs:label": "\n                            name\n                        ",
+      "rdfs:comment": "name of the sensor - format: SensorXX ex)Foobot00, Beddit02",
+      "rdfs:label": "name",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }
@@ -118,8 +118,8 @@
     {
       "@id": "webiot:room",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        room number of the building where the sensor resides - ex) L8321\n                    ",
-      "rdfs:label": "\n                            room\n                        ",
+      "rdfs:comment": "room number of the building where the sensor resides - ex) L8321",
+      "rdfs:label": "room",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }

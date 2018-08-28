@@ -3,14 +3,14 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
-    "webiot": "http://schema.webizing.org/",
+    "webiot": "http://schema.iot.webizing.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
       "@id": "webiot:Sleep",
       "@type": "rdfs:Class",
-      "rdfs:comment": "\n            Sleep Monitoring Sensor - 수면 시작 시간, 수면 끝 시간, 총 수면 시간 로깅 JSON-LD Format ex)Beddit, Fitbit\n        ",
+      "rdfs:comment": "Sleep Monitoring Sensor - 수면 시작 시간, 수면 끝 시간, 총 수면 시간 로깅 JSON-LD Format ex)Beddit, Fitbit",
       "rdfs:label": "Sleep",
       "schema:sameAs": {
         "@id": "webiot:Sleep"
@@ -19,8 +19,8 @@
     {
       "@id": "webiot:startDate",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        start time ex)2017-09-10T00:00:00+09:00\n                    ",
-      "rdfs:label": "\n                            startDate\n                        ",
+      "rdfs:comment": "start time ex)2017-09-10T00:00:00+09:00",
+      "rdfs:label": "startDate",
       "schema:rangeIncludes": {
         "@id": "schema:DateTime"
       }
@@ -28,8 +28,8 @@
     {
       "@id": "webiot:totalSleep",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        totalSleep time - unit: minute\n                    ",
-      "rdfs:label": "\n                            totalSleep\n                        ",
+      "rdfs:comment": "totalSleep time - unit: minute",
+      "rdfs:label": "totalSleep",
       "schema:rangeIncludes": {
         "@id": "schema:Float"
       }
@@ -37,8 +37,8 @@
     {
       "@id": "webiot:location",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        location of the sensor - format: free\n                    ",
-      "rdfs:label": "\n                            location\n                        ",
+      "rdfs:comment": "location of the sensor - format: free",
+      "rdfs:label": "location",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }
@@ -46,8 +46,8 @@
     {
       "@id": "webiot:address",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8\n                    ",
-      "rdfs:label": "\n                            address\n                        ",
+      "rdfs:comment": "building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8",
+      "rdfs:label": "address",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }
@@ -55,8 +55,8 @@
     {
       "@id": "webiot:room",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        room number of the building where the sensor resides - ex) L8321\n                    ",
-      "rdfs:label": "\n                            room\n                        ",
+      "rdfs:comment": "room number of the building where the sensor resides - ex) L8321",
+      "rdfs:label": "room",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }
@@ -64,8 +64,8 @@
     {
       "@id": "webiot:user",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm\n                    ",
-      "rdfs:label": "\n                            user\n                        ",
+      "rdfs:comment": "user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm",
+      "rdfs:label": "user",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }
@@ -73,8 +73,8 @@
     {
       "@id": "webiot:endDate",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        sleep end time ex)2017-09-10T06:30:00+09:00\n                    ",
-      "rdfs:label": "\n                            endDate\n                        ",
+      "rdfs:comment": "sleep end time ex)2017-09-10T06:30:00+09:00",
+      "rdfs:label": "endDate",
       "schema:rangeIncludes": {
         "@id": "schema:DateTime"
       }
@@ -82,8 +82,8 @@
     {
       "@id": "webiot:time",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        time at which the data measurement was made - ex)\"2017-05-30T18:54:20+09:00\"\n                    ",
-      "rdfs:label": "\n                            time\n                        ",
+      "rdfs:comment": "time at which the data measurement was made - ex)2017-05-30T18:54:20+09:00",
+      "rdfs:label": "time",
       "schema:rangeIncludes": {
         "@id": "schema:DateTime"
       }
@@ -91,8 +91,8 @@
     {
       "@id": "webiot:name",
       "@type": "rdf:Property",
-      "rdfs:comment": "\n                        name of the sensor - format: SensorXX ex)Foobot00, Beddit02\n                    ",
-      "rdfs:label": "\n                            name\n                        ",
+      "rdfs:comment": "name of the sensor - format: SensorXX ex)Foobot00, Beddit02",
+      "rdfs:label": "name",
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       }

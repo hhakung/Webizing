@@ -3,12 +3,12 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
-    "webiot": "http://schema.webizing.org/",
+    "webiot": "http://schema.iot.webizing.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@id": "webiot:temp",
   "@type": "rdf:Property",
-  "rdfs:comment": "\n            temperature - unit: Celsius(℃)\n        ",
+  "rdfs:comment": "temperature - unit: Celsius(℃)",
   "rdfs:label": "temp",
   "schema:domainIncludes": [
     {

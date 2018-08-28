@@ -3,12 +3,12 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
-    "webiot": "http://schema.webizing.org/",
+    "webiot": "http://schema.iot.webizing.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@id": "webiot:standHour",
   "@type": "rdf:Property",
-  "rdfs:comment": "\n            일어선 시간 - 1: 1시간, 0: 0시간\n        ",
+  "rdfs:comment": "일어선 시간 - 1: 1시간, 0: 0시간",
   "rdfs:label": "standHour",
   "schema:domainIncludes": {
     "@id": "webiot:SmartWatch"

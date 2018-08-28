@@ -3,7 +3,7 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
-    "webiot": "http://schema.webizing.org/",
+    "webiot": "http://schema.iot.webizing.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
@@ -11,7 +11,7 @@
       "@id": "webiot:Sleep",
       "@type": "rdfs:Class",
       "rdfs:comment": "Sleep Monitoring Sensor - 수면 시작 시간, 수면 끝 시간, 총 수면 시간 로깅 JSON-LD Format ex)Beddit, Fitbit",
-      "rdfs:label": "\n                        Sleep\n                    ",
+      "rdfs:label": "Sleep",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }
@@ -20,7 +20,7 @@
       "@id": "webiot:address",
       "@type": "rdf:Property",
       "rdfs:comment": "format: organization-building ex)yongjaelee-house, kist-l1, kist-l8",
-      "rdfs:label": "\n                        address\n                    ",
+      "rdfs:label": "address",
       "schema:domainIncludes": [
         {
           "@id": "webiot:Sleep"
@@ -52,7 +52,7 @@
       "@id": "webiot:caloryList",
       "@type": "rdf:Property",
       "rdfs:comment": "List of calories for the food items",
-      "rdfs:label": "\n                        caloryList\n                    ",
+      "rdfs:label": "caloryList",
       "schema:domainIncludes": {
         "@id": "webiot:SmartTable"
       },
@@ -64,7 +64,7 @@
       "@id": "webiot:heartRate",
       "@type": "rdf:Property",
       "rdfs:comment": "심박수 - unit: count/min",
-      "rdfs:label": "\n                        heartRate\n                    ",
+      "rdfs:label": "heartRate",
       "schema:domainIncludes": {
         "@id": "webiot:SmartWatch"
       },
@@ -76,7 +76,7 @@
       "@id": "webiot:endDate",
       "@type": "rdf:Property",
       "rdfs:comment": "sleep end time ex)2017-09-10T06:30:00+09:00",
-      "rdfs:label": "\n                        endDate\n                    ",
+      "rdfs:label": "endDate",
       "schema:domainIncludes": [
         {
           "@id": "webiot:SmartWatch"
@@ -93,7 +93,7 @@
       "@id": "webiot:standHour",
       "@type": "rdf:Property",
       "rdfs:comment": "일어선 시간 - 1: 1시간, 0: 0시간",
-      "rdfs:label": "\n                        standHour\n                    ",
+      "rdfs:label": "standHour",
       "schema:domainIncludes": {
         "@id": "webiot:SmartWatch"
       },
@@ -105,7 +105,7 @@
       "@id": "webiot:snapShot",
       "@type": "rdf:Property",
       "rdfs:comment": "url of the snap shot of the table",
-      "rdfs:label": "\n                        snapShot\n                    ",
+      "rdfs:label": "snapShot",
       "schema:domainIncludes": {
         "@id": "webiot:SmartTable"
       },
@@ -117,7 +117,7 @@
       "@id": "webiot:startDate",
       "@type": "rdf:Property",
       "rdfs:comment": "start time ex)2017-09-10T00:00:00+09:00",
-      "rdfs:label": "\n                        startDate\n                    ",
+      "rdfs:label": "startDate",
       "schema:domainIncludes": [
         {
           "@id": "webiot:Sleep"
@@ -134,7 +134,7 @@
       "@id": "webiot:status",
       "@type": "rdf:Property",
       "rdfs:comment": "1:앉음, 0:일어섬",
-      "rdfs:label": "\n                        status\n                    ",
+      "rdfs:label": "status",
       "schema:domainIncludes": {
         "@id": "webiot:Cushion"
       },
@@ -146,7 +146,7 @@
       "@id": "webiot:applianceId",
       "@type": "rdf:Property",
       "rdfs:comment": "가전제품 Id",
-      "rdfs:label": "\n                        applianceId\n                    ",
+      "rdfs:label": "applianceId",
       "schema:domainIncludes": {
         "@id": "webiot:EnergyApplianceMonitor"
       },
@@ -158,7 +158,7 @@
       "@id": "webiot:alwaysOn",
       "@type": "rdf:Property",
       "rdfs:comment": "Standby Power - unit: W",
-      "rdfs:label": "\n                        alwaysOn\n                    ",
+      "rdfs:label": "alwaysOn",
       "schema:domainIncludes": {
         "@id": "webiot:EnergyMonitor"
       },
@@ -170,7 +170,7 @@
       "@id": "webiot:SmartTable",
       "@type": "rdfs:Class",
       "rdfs:comment": "SmartTable Sensor - 음식 리스트, 음식 칼로리, 사진 URL 로깅",
-      "rdfs:label": "\n                        SmartTable\n                    ",
+      "rdfs:label": "SmartTable",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }
@@ -179,7 +179,7 @@
       "@id": "webiot:temp",
       "@type": "rdf:Property",
       "rdfs:comment": "temperature - unit: Celsius(℃)",
-      "rdfs:label": "\n                        temp\n                    ",
+      "rdfs:label": "temp",
       "schema:domainIncludes": [
         {
           "@id": "webiot:AirQuality"
@@ -196,7 +196,7 @@
       "@id": "webiot:location",
       "@type": "rdf:Property",
       "rdfs:comment": "location of Sensor - format: free",
-      "rdfs:label": "\n                        location\n                    ",
+      "rdfs:label": "location",
       "schema:domainIncludes": [
         {
           "@id": "webiot:Sleep"
@@ -228,7 +228,7 @@
       "@id": "webiot:activePower",
       "@type": "rdf:Property",
       "rdfs:comment": "appliance activePower - unit: W, 양수: On, 음수: Off",
-      "rdfs:label": "\n                        activePower\n                    ",
+      "rdfs:label": "activePower",
       "schema:domainIncludes": [
         {
           "@id": "webiot:EnergyApplianceMonitor"
@@ -245,7 +245,7 @@
       "@id": "webiot:pollution",
       "@type": "rdf:Property",
       "rdfs:comment": "unit is to be defined",
-      "rdfs:label": "\n                        pollution\n                    ",
+      "rdfs:label": "pollution",
       "schema:domainIncludes": {
         "@id": "webiot:AirQuality"
       },
@@ -257,7 +257,7 @@
       "@id": "webiot:user",
       "@type": "rdf:Property",
       "rdfs:comment": "format: firstName+LastName ex)jonghoLee, wanhoIm",
-      "rdfs:label": "\n                        user\n                    ",
+      "rdfs:label": "user",
       "schema:domainIncludes": [
         {
           "@id": "webiot:SmartTable"
@@ -288,8 +288,8 @@
     {
       "@id": "webiot:time",
       "@type": "rdf:Property",
-      "rdfs:comment": "ex)\"2017-05-30T18:54:20+09:00\"",
-      "rdfs:label": "\n                        time\n                    ",
+      "rdfs:comment": "ex)"2017-05-30T18:54:20+09:00",
+      "rdfs:label": "time",
       "schema:domainIncludes": [
         {
           "@id": "webiot:SmartTable"
@@ -321,7 +321,7 @@
       "@id": "webiot:room",
       "@type": "rdf:Property",
       "rdfs:comment": "room number ex) L8321",
-      "rdfs:label": "\n                        room\n                    ",
+      "rdfs:label": "room",
       "schema:domainIncludes": [
         {
           "@id": "webiot:EnergyMonitor"
@@ -353,7 +353,7 @@
       "@id": "webiot:EnergyApplianceMonitor",
       "@type": "rdfs:Class",
       "rdfs:comment": "EnergyApplianceMonitor Sensor - 가전제품 사용 탐지 ex)Smappee",
-      "rdfs:label": "\n                        EnergyApplianceMonitor\n                    ",
+      "rdfs:label": "EnergyApplianceMonitor",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }
@@ -362,7 +362,7 @@
       "@id": "webiot:voc",
       "@type": "rdf:Property",
       "rdfs:comment": "휘발성 유기 화합물 - unit: ppb",
-      "rdfs:label": "\n                        voc\n                    ",
+      "rdfs:label": "voc",
       "schema:domainIncludes": {
         "@id": "webiot:AirQuality"
       },
@@ -374,7 +374,7 @@
       "@id": "webiot:Cushion",
       "@type": "rdfs:Class",
       "rdfs:comment": "Cushion Sensor - 앉아 있는지 여부를 판단",
-      "rdfs:label": "\n                        Cushion\n                    ",
+      "rdfs:label": "Cushion",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }
@@ -383,7 +383,7 @@
       "@id": "webiot:co2",
       "@type": "rdf:Property",
       "rdfs:comment": "이산화탄소 - unit: ppm",
-      "rdfs:label": "\n                        co2\n                    ",
+      "rdfs:label": "co2",
       "schema:domainIncludes": {
         "@id": "webiot:AirQuality"
       },
@@ -395,7 +395,7 @@
       "@id": "webiot:stepCount",
       "@type": "rdf:Property",
       "rdfs:comment": "걸음 수",
-      "rdfs:label": "\n                        stepCount\n                    ",
+      "rdfs:label": "stepCount",
       "schema:domainIncludes": {
         "@id": "webiot:SmartWatch"
       },
@@ -407,7 +407,7 @@
       "@id": "webiot:exerciseTime",
       "@type": "rdf:Property",
       "rdfs:comment": "운동시간 - unit: minute",
-      "rdfs:label": "\n                        exerciseTime\n                    ",
+      "rdfs:label": "exerciseTime",
       "schema:domainIncludes": {
         "@id": "webiot:SmartWatch"
       },
@@ -419,7 +419,7 @@
       "@id": "webiot:foodList",
       "@type": "rdf:Property",
       "rdfs:comment": "List of food items",
-      "rdfs:label": "\n                        foodList\n                    ",
+      "rdfs:label": "foodList",
       "schema:domainIncludes": {
         "@id": "webiot:SmartTable"
       },
@@ -431,7 +431,7 @@
       "@id": "webiot:SmartWatch",
       "@type": "rdfs:Class",
       "rdfs:comment": "SmartWatch Sensor - 걸음 수, 심박, 운동시간, 일어서 있는 시간 로깅 ex)Fitbit, AppleWatch",
-      "rdfs:label": "\n                        SmartWatch\n                    ",
+      "rdfs:label": "SmartWatch",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }
@@ -440,7 +440,7 @@
       "@id": "webiot:consumption",
       "@type": "rdf:Property",
       "rdfs:comment": "electric power consumption - unit: W",
-      "rdfs:label": "\n                        consumption\n                    ",
+      "rdfs:label": "consumption",
       "schema:domainIncludes": {
         "@id": "webiot:EnergyMonitor"
       },
@@ -452,7 +452,7 @@
       "@id": "webiot:humidity",
       "@type": "rdf:Property",
       "rdfs:comment": "습도 - unit: %",
-      "rdfs:label": "\n                        humidity\n                    ",
+      "rdfs:label": "humidity",
       "schema:domainIncludes": {
         "@id": "webiot:AirQuality"
       },
@@ -462,13 +462,13 @@
     },
     {
       "@id": "",
-      "schema:softwareVersion": "\n                    WebIoT Version 1.0\n            "
+      "schema:softwareVersion": "WebIoT Version 1.0\n            "
     },
     {
       "@id": "webiot:AirQuality",
       "@type": "rdfs:Class",
       "rdfs:comment": "AirQuality Sensor - 공기질 로깅 ex)Foobot(5분 주기로 데이터를 가져옴)",
-      "rdfs:label": "\n                        AirQuality\n                    ",
+      "rdfs:label": "AirQuality",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }
@@ -477,7 +477,7 @@
       "@id": "webiot:particle",
       "@type": "rdf:Property",
       "rdfs:comment": "pm2.5 - unit: ㎍/㎥",
-      "rdfs:label": "\n                        particle\n                    ",
+      "rdfs:label": "particle",
       "schema:domainIncludes": {
         "@id": "webiot:AirQuality"
       },
@@ -489,7 +489,7 @@
       "@id": "webiot:totalSleep",
       "@type": "rdf:Property",
       "rdfs:comment": "totalSleep time - unit: minute",
-      "rdfs:label": "\n                        totalSleep\n                    ",
+      "rdfs:label": "totalSleep",
       "schema:domainIncludes": {
         "@id": "webiot:Sleep"
       },
@@ -501,7 +501,7 @@
       "@id": "webiot:pressure",
       "@type": "rdf:Property",
       "rdfs:comment": "unit is to be defined",
-      "rdfs:label": "\n                        pressure\n                    ",
+      "rdfs:label": "pressure",
       "schema:domainIncludes": {
         "@id": "webiot:Cushion"
       },
@@ -513,7 +513,7 @@
       "@id": "webiot:name",
       "@type": "rdf:Property",
       "rdfs:comment": "name of Sensor - format: SensorXX ex)Foobot00, Beddit02",
-      "rdfs:label": "\n                        name\n                    ",
+      "rdfs:label": "name",
       "schema:domainIncludes": [
         {
           "@id": "webiot:Sleep"
@@ -545,7 +545,7 @@
       "@id": "webiot:EnergyMonitor",
       "@type": "rdfs:Class",
       "rdfs:comment": "EnergyMonitor Sensor - 전력 사용량 모니터링 ex)Smappee(5분 주기로 데이터를 가져옴), Enertalk",
-      "rdfs:label": "\n                        EnergyMonitor\n                    ",
+      "rdfs:label": "EnergyMonitor",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }

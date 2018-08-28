@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# 
-                webiot: http://schema.webizing.org/
+                webiot: http://schema.iot.webizing.org/
                 schema: http://schema.org/ 
                 rdfs: http://www.w3.org/2000/01/rdf-schema#" lang="en">
 <head>
@@ -18,16 +18,16 @@
 </style>
 </head>
 <body>
-    <div id="content" typeof="rdfs:Class" resource="http://schema.webizing.org/EnergyMonitor">
+    <div id="content" typeof="rdfs:Class" resource="http://schema.iot.webizing.org/EnergyMonitor">
         <h1 property="rdfs:label">EnergyMonitor</h1>
         <span>Canonical URL: 
-            <a href="http://schema.webizing.org/EnergyMonitor">http://schema.webizing.org/EnergyMonitor</a>
+            <a href="http://schema.iot.webizing.org/EnergyMonitor">http://schema.iot.webizing.org/EnergyMonitor</a>
         </span>
-        <link property="schema:sameAs" href="http://schema.webizing.org/EnergyMonitor" />
+        <link property="schema:sameAs" href="http://schema.iot.webizing.org/EnergyMonitor" />
         <h4>
             <a href="http://schema.org/Thing" class="prefix-schema">schema:Thing</a>
             >
-            <a href="http://schema.webizing.org/EnergyMonitor" class="prefix-schema">EnergyMonitor</a>
+            <a href="http://schema.iot.webizing.org/EnergyMonitor" class="prefix-schema">EnergyMonitor</a>
         </h4>
         <div property="rdfs:comment">
             EnergyMonitor Sensor - 전력 사용량 모니터링 ex)Smappee(5분 주기로 데이터를 가져옴), Enertalk
@@ -42,10 +42,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr typeof="rdf:Property" resource="http://schema.webizing.org/name">
+                <tr typeof="rdf:Property" resource="http://schema.iot.webizing.org/name">
                     <td>
                         <span property="rdfs:label">
-                            <a href="http://schema.webizing.org/name">name</a>
+                            <a href="http://schema.iot.webizing.org/name">name</a>
                         </span>
                     </td>
                     <td>
@@ -56,10 +56,10 @@
                         name of the sensor - format: SensorXX ex)Foobot00, Beddit02
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="http://schema.webizing.org/user">
+                <tr typeof="rdf:Property" resource="http://schema.iot.webizing.org/user">
                     <td>
                         <span property="rdfs:label">
-                            <a href="http://schema.webizing.org/user">user</a>
+                            <a href="http://schema.iot.webizing.org/user">user</a>
                         </span>
                     </td>
                     <td>
@@ -70,10 +70,10 @@
                         user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="http://schema.webizing.org/address">
+                <tr typeof="rdf:Property" resource="http://schema.iot.webizing.org/address">
                     <td>
                         <span property="rdfs:label">
-                            <a href="http://schema.webizing.org/address">address</a>
+                            <a href="http://schema.iot.webizing.org/address">address</a>
                         </span>
                     </td>
                     <td>
@@ -84,10 +84,10 @@
                         building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="http://schema.webizing.org/room">
+                <tr typeof="rdf:Property" resource="http://schema.iot.webizing.org/room">
                     <td>
                         <span property="rdfs:label">
-                            <a href="http://schema.webizing.org/room">room</a>
+                            <a href="http://schema.iot.webizing.org/room">room</a>
                         </span>
                     </td>
                     <td>
@@ -98,10 +98,10 @@
                         room number of the building where the sensor resides - ex) L8321
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="http://schema.webizing.org/location">
+                <tr typeof="rdf:Property" resource="http://schema.iot.webizing.org/location">
                     <td>
                         <span property="rdfs:label">
-                            <a href="http://schema.webizing.org/location">location</a>
+                            <a href="http://schema.iot.webizing.org/location">location</a>
                         </span>
                     </td>
                     <td>
@@ -112,10 +112,10 @@
                         location of the sensor - format: free
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="http://schema.webizing.org/time">
+                <tr typeof="rdf:Property" resource="http://schema.iot.webizing.org/time">
                     <td>
                         <span property="rdfs:label">
-                            <a href="http://schema.webizing.org/time">time</a>
+                            <a href="http://schema.iot.webizing.org/time">time</a>
                         </span>
                     </td>
                     <td>
@@ -126,10 +126,10 @@
                         time at which the data measurement was made - ex)"2017-05-30T18:54:20+09:00"
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="http://schema.webizing.org/consumption">
+                <tr typeof="rdf:Property" resource="http://schema.iot.webizing.org/consumption">
                     <td>
                         <span property="rdfs:label">
-                            <a href="http://schema.webizing.org/consumption">consumption</a>
+                            <a href="http://schema.iot.webizing.org/consumption">consumption</a>
                         </span>
                     </td>
                     <td>
@@ -140,10 +140,10 @@
                         electric power consumption - unit: W
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="http://schema.webizing.org/alwaysOn">
+                <tr typeof="rdf:Property" resource="http://schema.iot.webizing.org/alwaysOn">
                     <td>
                         <span property="rdfs:label">
-                            <a href="http://schema.webizing.org/alwaysOn">alwaysOn</a>
+                            <a href="http://schema.iot.webizing.org/alwaysOn">alwaysOn</a>
                         </span>
                     </td>
                     <td>
@@ -161,7 +161,7 @@
             <h3>JSON-LD Usage Example</h3>
             <p>
                 {   <br /> 
-                    "@context": "http://schema.webizing.org/", <br />
+                    "@context": "http://schema.iot.webizing.org/", <br />
                     "@type": "EnergyMonitor", <br />
                     "name": "Foobot00", <br />
                     "user": "jonghoLee", <br />
