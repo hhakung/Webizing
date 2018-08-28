@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# 
+                webiot: http://schema.webizing.org/
+                schema: http://schema.org/ 
+                rdfs: http://www.w3.org/2000/01/rdf-schema#" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>EnergyApplianceMonitor</title>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;    
+    }
+</style>
+</head>
+<body>
+    <div id="content" typeof="rdfs:Class" resource="http://schema.webizing.org/EnergyApplianceMonitor">
+        <h1 property="rdfs:label">EnergyApplianceMonitor</h1>
+        <span>Canonical URL: 
+            <a href="http://schema.webizing.org/EnergyApplianceMonitor">http://schema.webizing.org/EnergyApplianceMonitor</a>
+        </span>
+        <link property="schema:sameAs" href="http://schema.webizing.org/EnergyApplianceMonitor" />
+        <h4>
+            <a href="http://schema.org/Thing" class="prefix-schema">schema:Thing</a>
+            >
+            <a href="http://schema.webizing.org/EnergyApplianceMonitor" class="prefix-schema">EnergyApplianceMonitor</a>
+        </h4>
+        <div property="rdfs:comment">
+            EnergyApplianceMonitor Sensor - 공기질 로깅 ex)Foobot(5분 주기로 데이터를 가져옴)
+        </div>
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Expected Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/name">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/name">name</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        name of the sensor - format: SensorXX ex)Foobot00, Beddit02
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/user">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/user">user</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/address">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/address">address</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/room">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/room">room</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        room number of the building where the sensor resides - ex) L8321
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/location">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/location">location</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        location of the sensor - format: free
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/time">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/time">time</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/DateTime" />
+                        <a href="http://schema.org/DateTime">schema:DateTime</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        time at which the data measurement was made - ex)"2017-05-30T18:54:20+09:00"
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/applianceId">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/applianceId">applianceId</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        가전제품 Id
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/activePower">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/activePower">activePower</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Float" />
+                        <a href="http://schema.org/Float">schema:Float</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        appliance activePower - unit: W, 양수: On, 음수: Off
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <div>
+            <h3>JSON-LD Usage Example</h3>
+            <p>
+                {   <br /> 
+                    "@context": "http://schema.webizing.org/", <br />
+                    "@type": "EnergyApplianceMonitor", <br />
+                    "name": "Foobot00", <br />
+                    "user": "jonghoLee", <br />
+                    "address": "kist-l1", <br />
+                    "room": "L8321", <br />
+                    "location": "On the table", <br />
+                    "time": "2017-05-30T18:54:20+09:00", <br />
+                    "applianceId": "W983MF", <br />
+                    "activePower": "2030.03" <br />
+                }
+            </p>
+        </div>    
+    </div>
+</body>
+</html>

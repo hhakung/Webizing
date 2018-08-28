@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# 
+                webiot: http://schema.webizing.org/
+                schema: http://schema.org/ 
+                rdfs: http://www.w3.org/2000/01/rdf-schema#" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>AirQuality</title>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;    
+    }
+</style>
+</head>
+<body>
+    <div id="content" typeof="rdfs:Class" resource="http://schema.webizing.org/AirQuality">
+        <h1 property="rdfs:label">AirQuality</h1>
+        <span>Canonical URL: 
+            <a href="http://schema.webizing.org/AirQuality">http://schema.webizing.org/AirQuality</a>
+        </span>
+        <link property="schema:sameAs" href="http://schema.webizing.org/AirQuality" />
+        <h4>
+            <a href="http://schema.org/Thing" class="prefix-schema">schema:Thing</a>
+            >
+            <a href="http://schema.webizing.org/AirQuality" class="prefix-schema">AirQuality</a>
+        </h4>
+        <div property="rdfs:comment">
+            AirQuality Sensor - 공기질 로깅 ex)Foobot(5분 주기로 데이터를 가져옴)
+        </div>
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Expected Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/name">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/name">name</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        name of the sensor - format: SensorXX ex)Foobot00, Beddit02
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/user">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/user">user</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/address">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/address">address</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/room">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/room">room</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        room number of the building where the sensor resides - ex) L8321
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/location">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/location">location</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Text" />
+                        <a href="http://schema.org/Text">schema:Text</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        location of the sensor - format: free
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/time">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/time">time</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/DateTime" />
+                        <a href="http://schema.org/DateTime">schema:DateTime</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        time at which the data measurement was made - ex)"2017-05-30T18:54:20+09:00"
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/humidity">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/humidity">humidity</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Float" />
+                        <a href="http://schema.org/Float">schema:Float</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        습도 - unit: %
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/temp">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/temp">temp</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Float" />
+                        <a href="http://schema.org/Float">schema:Float</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        temperature - unit: Celsius(℃)
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/particle">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/particle">particle</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Float" />
+                        <a href="http://schema.org/Float">schema:Float</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        pm2.5 - unit: ㎍/㎥
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/co2">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/co2">co2</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Float" />
+                        <a href="http://schema.org/Float">schema:Float</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        이산화탄소 - unit: ppm
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/voc">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/voc">voc</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Float" />
+                        <a href="http://schema.org/Float">schema:Float</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        휘발성 유기 화합물 - unit: ppb
+                    </td>
+                </tr>
+                <tr typeof="rdf:Property" resource="http://schema.webizing.org/pollution">
+                    <td>
+                        <span property="rdfs:label">
+                            <a href="http://schema.webizing.org/pollution">pollution</a>
+                        </span>
+                    </td>
+                    <td>
+                        <link property="schema:rangeIncludes" href="http://schema.org/Float" />
+                        <a href="http://schema.org/Float">schema:Float</a>
+                    </td>
+                    <td property="rdfs:comment">
+                        미세먼지 - unit: TBD
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <div>
+            <h3>JSON-LD Usage Example</h3>
+            <p>
+                {   <br /> 
+                    "@context": "http://schema.webizing.org/", <br />
+                    "@type": "AirQuality", <br />
+                    "name": "Foobot00", <br />
+                    "user": "jonghoLee", <br />
+                    "address": "kist-l1", <br />
+                    "room": "L8321", <br />
+                    "location": "On the table", <br />
+                    "time": "2017-05-30T18:54:20+09:00", <br />
+                    "humidity": "34.2", <br />
+                    "temp": "28.5", <br />
+                    "particle": "1.3", <br />
+                    "co2": "2.4", <br />
+                    "voc": "1.3", <br />
+                    "pollution": "23.6" <br />
+                }
+            </p>
+        </div>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "webiot": "http://schema.webizing.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "webiot:heartRate",
+  "@type": "rdf:Property",
+  "rdfs:comment": "\n            심박수 - unit: count/min\n        ",
+  "rdfs:label": "heartRate",
+  "schema:domainIncludes": {
+    "@id": "webiot:SmartWatch"
+  },
+  "schema:rangeIncludes": {
+    "@id": "schema:Integer"
+  },
+  "schema:sameAs": {
+    "@id": "webiot:heartRate"
+  }
+}

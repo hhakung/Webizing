@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "webiot": "http://schema.webizing.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "webiot:caloryList",
+  "@type": "rdf:Property",
+  "rdfs:comment": "\n            List of calories for the food items\n        ",
+  "rdfs:label": "caloryList",
+  "schema:domainIncludes": {
+    "@id": "webiot:SmartTable"
+  },
+  "schema:rangeIncludes": {
+    "@id": "schema:ItemList"
+  },
+  "schema:sameAs": {
+    "@id": "webiot:caloryList"
+  }
+}

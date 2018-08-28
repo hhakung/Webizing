@@ -1,0 +1,128 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "webiot": "http://schema.webizing.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "webiot:voc",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        휘발성 유기 화합물 - unit: ppb\n                    ",
+      "rdfs:label": "\n                            voc\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:user",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm\n                    ",
+      "rdfs:label": "\n                            user\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:address",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8\n                    ",
+      "rdfs:label": "\n                            address\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:humidity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        습도 - unit: %\n                    ",
+      "rdfs:label": "\n                            humidity\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:AirQuality",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "\n            AirQuality Sensor - 공기질 로깅 ex)Foobot(5분 주기로 데이터를 가져옴)\n        ",
+      "rdfs:label": "AirQuality",
+      "schema:sameAs": {
+        "@id": "webiot:AirQuality"
+      }
+    },
+    {
+      "@id": "webiot:particle",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        pm2.5 - unit: ㎍/㎥\n                    ",
+      "rdfs:label": "\n                            particle\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:location",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        location of the sensor - format: free\n                    ",
+      "rdfs:label": "\n                            location\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:temp",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        temperature - unit: Celsius(℃)\n                    ",
+      "rdfs:label": "\n                            temp\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:pollution",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        미세먼지 - unit: TBD\n                    ",
+      "rdfs:label": "\n                            pollution\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:room",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        room number of the building where the sensor resides - ex) L8321\n                    ",
+      "rdfs:label": "\n                            room\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:co2",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        이산화탄소 - unit: ppm\n                    ",
+      "rdfs:label": "\n                            co2\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:time",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        time at which the data measurement was made - ex)\"2017-05-30T18:54:20+09:00\"\n                    ",
+      "rdfs:label": "\n                            time\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:DateTime"
+      }
+    },
+    {
+      "@id": "webiot:name",
+      "@type": "rdf:Property",
+      "rdfs:comment": "\n                        name of the sensor - format: SensorXX ex)Foobot00, Beddit02\n                    ",
+      "rdfs:label": "\n                            name\n                        ",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    }
+  ]
+}

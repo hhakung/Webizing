@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "webiot": "http://schema.webizing.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "webiot:status",
+  "@type": "rdf:Property",
+  "rdfs:comment": "\n            1:앉음, 0:일어섬\n        ",
+  "rdfs:label": "status",
+  "schema:domainIncludes": {
+    "@id": "webiot:Cushion"
+  },
+  "schema:rangeIncludes": {
+    "@id": "schema:Boolean"
+  },
+  "schema:sameAs": {
+    "@id": "webiot:status"
+  }
+}

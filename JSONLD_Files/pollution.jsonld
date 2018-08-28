@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "webiot": "http://schema.webizing.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "webiot:pollution",
+  "@type": "rdf:Property",
+  "rdfs:comment": "\n            unit is to be defined\n        ",
+  "rdfs:label": "pollution",
+  "schema:domainIncludes": {
+    "@id": "webiot:AirQuality"
+  },
+  "schema:rangeIncludes": {
+    "@id": "schema:Float"
+  },
+  "schema:sameAs": {
+    "@id": "webiot:pollution"
+  }
+}
