@@ -11,7 +11,7 @@
       "@id": "webiot:voc",
       "@type": "rdf:Property",
       "rdfs:comment": "휘발성 유기 화합물 - unit: ppb",
-      "rdfs:label": "    voc",
+      "rdfs:label": "voc",
       "schema:rangeIncludes": {
         "@id": "schema:Float"
       }

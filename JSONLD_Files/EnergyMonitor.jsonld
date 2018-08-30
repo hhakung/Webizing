@@ -73,7 +73,7 @@
     {
       "@id": "webiot:time",
       "@type": "rdf:Property",
-      "rdfs:comment": "time at which the data measurement was made - ex)"2017-05-30T18:54:20+09:00",
+      "rdfs:comment": "time at which the data measurement was made - ex)2017-05-30T18:54:20+09:00",
       "rdfs:label": "time",
       "schema:rangeIncludes": {
         "@id": "schema:DateTime"
