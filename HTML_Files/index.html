@@ -139,6 +139,21 @@
                     <br />
                 </div>
             </li>
+			<li>
+                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/IPCamera">
+                    <span property="rdfs:label">
+                        <a href="http://schema.iot.webizing.org/IPCamera"><b>IPCamera</b></a>
+                    </span>
+                    <br />
+                    <span property="rdfs:comment">IPCamera Sensor - video content from the IP Camera</span>
+                    <br />
+                    <span>
+                        <b>Subclass of:</b>
+                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                    </span>
+                    <br />
+                </div>
+            </li>
         </ul>
         <h4>Properties</h4>
         <ul>
@@ -738,6 +753,26 @@
                     <span>
                         <b>Range:</b>
                         <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                    </span>
+                    <br />
+                </div>
+            </li>
+			<li>
+                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/url">
+                    <span property="rdfs:label">
+                        <a href="http://schema.iot.webizing.org/url"><b>url</b></a>
+                    </span>
+                    <br />
+                    <span property="rdfs:comment">link to the video</span>
+                    <br />
+                    <span>
+                        <b>Domain:</b>
+                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                    </span>
+                    <br />
+                    <span>
+                        <b>Range:</b>
+                        <a property="schema:rangeIncludes" href="http://schema.org/URL">schema:URL</a>
                     </span>
                     <br />
                 </div>
