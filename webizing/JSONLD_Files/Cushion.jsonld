@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "webiot": "http://schema.iot.webizing.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "webiot:pressure",
+      "@type": "rdf:Property",
+      "rdfs:comment": "unit is to be defined",
+      "rdfs:label": "pressure",
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:Cushion",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Cushion Sensor - 앉아 있는지 여부를 판단",
+      "rdfs:label": "Cushion",
+      "schema:sameAs": {
+        "@id": "webiot:Cushion"
+      }
+    },
+    {
+      "@id": "webiot:status",
+      "@type": "rdf:Property",
+      "rdfs:comment": "pm2.5 - unit: ㎍/㎥",
+      "rdfs:label": "status",
+      "schema:rangeIncludes": {
+        "@id": "schema:Boolean"
+      }
+    },
+    {
+      "@id": "webiot:temp",
+      "@type": "rdf:Property",
+      "rdfs:comment": "temperature - unit: Celsius(℃)",
+      "rdfs:label": "temp",
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:location",
+      "@type": "rdf:Property",
+      "rdfs:comment": "location of the sensor - format: free",
+      "rdfs:label": "location",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:address",
+      "@type": "rdf:Property",
+      "rdfs:comment": "building where the sensor resides - format: organization-building ex)yongjaelee-house, kist-l1, kist-l8",
+      "rdfs:label": "address",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:room",
+      "@type": "rdf:Property",
+      "rdfs:comment": "room number of the building where the sensor resides - ex) L8321",
+      "rdfs:label": "room",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:user",
+      "@type": "rdf:Property",
+      "rdfs:comment": "user of the sensor - format: firstName+LastName ex)jonghoLee, wanhoIm",
+      "rdfs:label": "user",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:time",
+      "@type": "rdf:Property",
+      "rdfs:comment": "time at which the data measurement was made - ex)2017-05-30T18:54:20+09:00",
+      "rdfs:label": "time",
+      "schema:rangeIncludes": {
+        "@id": "schema:DateTime"
+      }
+    },
+    {
+      "@id": "webiot:name",
+      "@type": "rdf:Property",
+      "rdfs:comment": "name of the sensor - format: SensorXX ex)Foobot00, Beddit02",
+      "rdfs:label": "name",
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    }
+  ]
+}

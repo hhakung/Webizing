@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "webiot": "http://schema.iot.webizing.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "webiot:url",
+  "@type": "rdf:Property",
+  "rdfs:comment": "link to the video",
+  "rdfs:label": "url",
+  "schema:domainIncludes": {
+    "@id": "webiot:IPCamera"
+  },
+  "schema:rangeIncludes": {
+    "@id": "schema:URL"
+  },
+  "schema:sameAs": {
+    "@id": "webiot:url"
+  }
+}

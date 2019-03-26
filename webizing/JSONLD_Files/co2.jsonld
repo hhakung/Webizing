@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "webiot": "http://schema.iot.webizing.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "webiot:co2",
+  "@type": "rdf:Property",
+  "rdfs:comment": "이산화탄소 - unit: ppm",
+  "rdfs:label": "co2",
+  "schema:domainIncludes": {
+    "@id": "webiot:AirQuality"
+  },
+  "schema:rangeIncludes": {
+    "@id": "schema:co2"
+  },
+  "schema:sameAs": {
+    "@id": "webiot:co2"
+  }
+}
