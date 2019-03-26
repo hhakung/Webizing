@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# 
-                webiot: http://schema.iot.webizing.org/
-                schema: http://schema.org/ 
-                rdfs: http://www.w3.org/2000/01/rdf-schema#" lang="en">
+<html prefix="rdf: https://www.w3.org/1999/02/22-rdf-syntax-ns# 
+                webiot: https://schema.iot.webizing.org/
+                schema: https://schema.org/ 
+                rdfs: https://www.w3.org/2000/01/rdf-schema#" lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta https-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Webizing Ontology</title>
 <style>
     table, th, td {
@@ -15,6 +15,7 @@
         padding: 5px;
         text-align: left;    
     }
+    
 </style>
 </head>
 <body>
@@ -35,121 +36,136 @@
         <h4>Sensors</h4>
         <ul>
             <li>
-                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/AirQuality">
+                <div typeof="rdfs:Class" resource="httpss://schema.iot.webizing.org/AirQuality">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/AirQuality"><b>AirQuality</b></a>
+                        <a href="https://schema.iot.webizing.org/AirQuality"><b>AirQuality</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">AirQuality Sensor - 공기질 로깅 ex)Foobot(5분 주기로 데이터를 가져옴)</span>
                     <br />
                     <span>
                         <b>Subclass of:</b>
-                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                        <a property="rdfs:subClassOf" href="httpss://schema.org/Thing">schema:Thing</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/Cushion">
+                <div typeof="rdfs:Class" resource="https://schema.iot.webizing.org/Cushion">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/Cushion"><b>Cushion</b></a>
+                        <a href="https://schema.iot.webizing.org/Cushion"><b>Cushion</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">Cushion Sensor - 앉아 있는지 여부를 판단</span>
                     <br />
                     <span>
                         <b>Subclass of:</b>
-                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                        <a property="rdfs:subClassOf" href="https://schema.org/Thing">schema:Thing</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/EnergyApplianceMonitor">
+                <div typeof="rdfs:Class" resource="https://schema.iot.webizing.org/EnergyApplianceMonitor">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/EnergyApplianceMonitor"><b>EnergyApplianceMonitor</b></a>
+                        <a href="https://schema.iot.webizing.org/EnergyApplianceMonitor"><b>EnergyApplianceMonitor</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">EnergyApplianceMonitor Sensor - 가전제품 사용 탐지 ex)Smappee</span>
                     <br />
                     <span>
                         <b>Subclass of:</b>
-                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                        <a property="rdfs:subClassOf" href="https://schema.org/Thing">schema:Thing</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/EnergyMonitor">
+                <div typeof="rdfs:Class" resource="https://schema.iot.webizing.org/EnergyMonitor">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/EnergyMonitor"><b>EnergyMonitor</b></a>
+                        <a href="https://schema.iot.webizing.org/EnergyMonitor"><b>EnergyMonitor</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">EnergyMonitor Sensor - 전력 사용량 모니터링 ex)Smappee(5분 주기로 데이터를 가져옴), Enertalk</span>
                     <br />
                     <span>
                         <b>Subclass of:</b>
-                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                        <a property="rdfs:subClassOf" href="https://schema.org/Thing">schema:Thing</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/Sleep">
+                <div typeof="rdfs:Class" resource="https://schema.iot.webizing.org/Sleep">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/Sleep"><b>Sleep</b></a>
+                        <a href="https://schema.iot.webizing.org/Sleep"><b>Sleep</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">Sleep Monitoring Sensor - 수면 시작 시간, 수면 끝 시간, 총 수면 시간 로깅 JSON-LD Format ex)Beddit, Fitbit</span>
                     <br />
                     <span>
                         <b>Subclass of:</b>
-                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                        <a property="rdfs:subClassOf" href="https://schema.org/Thing">schema:Thing</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/SmartTable">
+                <div typeof="rdfs:Class" resource="https://schema.iot.webizing.org/SmartTable">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/SmartTable"><b>SmartTable</b></a>
+                        <a href="https://schema.iot.webizing.org/SmartTable"><b>SmartTable</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">SmartTable Sensor - 음식 리스트, 음식 칼로리, 사진 URL 로깅</span>
                     <br />
                     <span>
                         <b>Subclass of:</b>
-                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                        <a property="rdfs:subClassOf" href="https://schema.org/Thing">schema:Thing</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/SmartWatch">
+                <div typeof="rdfs:Class" resource="https://schema.iot.webizing.org/SmartWatch">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/SmartWatch"><b>SmartWatch</b></a>
+                        <a href="https://schema.iot.webizing.org/SmartWatch"><b>SmartWatch</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">SmartWatch Sensor - 걸음 수, 심박, 운동시간, 일어서 있는 시간 로깅 ex)Fitbit, AppleWatch</span>
                     <br />
                     <span>
                         <b>Subclass of:</b>
-                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                        <a property="rdfs:subClassOf" href="https://schema.org/Thing">schema:Thing</a>
                     </span>
                     <br />
                 </div>
             </li>
 			<li>
-                <div typeof="rdfs:Class" resource="http://schema.iot.webizing.org/IPCamera">
+                <div typeof="rdfs:Class" resource="https://schema.iot.webizing.org/IPCamera">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/IPCamera"><b>IPCamera</b></a>
+                        <a href="https://schema.iot.webizing.org/IPCamera"><b>IPCamera</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">IPCamera Sensor - video content from the IP Camera</span>
                     <br />
                     <span>
                         <b>Subclass of:</b>
-                        <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+                        <a property="rdfs:subClassOf" href="https://schema.org/Thing">schema:Thing</a>
+                    </span>
+                    <br />
+                </div>
+            </li>
+            <li>
+                <div typeof="rdfs:Class" resource="https://schema.iot.webizing.org/IPFSCamera">
+                    <span property="rdfs:label">
+                        <a href="https://schema.iot.webizing.org/IPFSCamera"><b>IPFSCamera</b></a>
+                    </span>
+                    <br />
+                    <span property="rdfs:comment">IPFSCamera Sensor - video content from the IPFS Camera</span>
+                    <br />
+                    <span>
+                        <b>Subclass of:</b>
+                        <a property="rdfs:subClassOf" href="https://schema.iot.webizing.org/IPCamera">webiot:IPCamera</a>
                     </span>
                     <br />
                 </div>
@@ -158,621 +174,654 @@
         <h4>Properties</h4>
         <ul>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/activePower">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/activePower">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/activePower"><b>activePower</b></a>
+                        <a href="https://schema.iot.webizing.org/activePower"><b>activePower</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">appliance activePower - unit: W, 양수: On, 음수: Off</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/address">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/address">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/address"><b>address</b></a>
+                        <a href="https://schema.iot.webizing.org/address"><b>address</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">format: organization-building ex)yongjaelee-house, kist-l1, kist-l8</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPFSCamera">IPFSCamera</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Text">schema:Text</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Text">schema:Text</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/alwaysOn">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/alwaysOn">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/alwaysOn"><b>alwaysOn</b></a>
+                        <a href="https://schema.iot.webizing.org/alwaysOn"><b>alwaysOn</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">Standby Power - unit: W</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Number">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Number">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/applianceId">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/applianceId">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/applianceId"><b>applianceId</b></a>
+                        <a href="https://schema.iot.webizing.org/applianceId"><b>applianceId</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">가전제품 Id</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Number">schema:Text</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Number">schema:Text</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/caloryList">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/caloryList">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/caloryList"><b>caloryList</b></a>
+                        <a href="https://schema.iot.webizing.org/caloryList"><b>caloryList</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">List of calories for the food items</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/ItemList">schema:ItemList</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/ItemList">schema:ItemList</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/co2">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/co2">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/co2"><b>co2</b></a>
+                        <a href="https://schema.iot.webizing.org/co2"><b>co2</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">이산화탄소 - unit: ppm</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Number">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Number">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/consumption">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/consumption">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/consumption"><b>consumption</b></a>
+                        <a href="https://schema.iot.webizing.org/consumption"><b>consumption</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">electric power consumption - unit: W</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/endDate">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/endDate">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/endDate"><b>endDate</b></a>
+                        <a href="https://schema.iot.webizing.org/endDate"><b>endDate</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">sleep end time ex)2017-09-10T06:30:00+09:00</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/DateTime">schema:DateTime</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/DateTime">schema:DateTime</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/exerciseTime">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/exerciseTime">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/exerciseTime"><b>exerciseTime</b></a>
+                        <a href="https://schema.iot.webizing.org/exerciseTime"><b>exerciseTime</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">운동시간 - unit: minute</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Number">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Number">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/foodList">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/foodList">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/foodList"><b>foodList</b></a>
+                        <a href="https://schema.iot.webizing.org/foodList"><b>foodList</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">List of food items</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/ItemList">schema:ItemList</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/ItemList">schema:ItemList</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/heartRate">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/heartRate">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/heartRate"><b>heartRate</b></a>
+                        <a href="https://schema.iot.webizing.org/heartRate"><b>heartRate</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">심박수 - unit: count/min</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Number">schema:Integer</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Number">schema:Integer</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/humidity">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/humidity">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/humidity"><b>humidity</b></a>
+                        <a href="https://schema.iot.webizing.org/humidity"><b>humidity</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">습도 - unit: %</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/location">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/location">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/location"><b>location</b></a>
+                        <a href="https://schema.iot.webizing.org/location"><b>location</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">location of Sensor - format: free</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPFSCamera">IPFSCamera</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Text">schema:Text</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Text">schema:Text</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/name">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/name">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/name"><b>name</b></a>
+                        <a href="https://schema.iot.webizing.org/name"><b>name</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">name of Sensor - format: SensorXX ex)Foobot00, Beddit02</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPFSCamera">IPFSCamera</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Text">schema:Text</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Text">schema:Text</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/particle">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/particle">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/particle"><b>particle</b></a>
+                        <a href="https://schema.iot.webizing.org/particle"><b>particle</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">pm2.5 - unit: ㎍/㎥</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/pollution">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/pollution">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/pollution"><b>pollution</b></a>
+                        <a href="https://schema.iot.webizing.org/pollution"><b>pollution</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">unit is to be defined</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/pressure">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/pressure">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/pressure"><b>pressure</b></a>
+                        <a href="https://schema.iot.webizing.org/pressure"><b>pressure</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">unit is to be defined</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/room">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/room">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/room"><b>room</b></a>
+                        <a href="https://schema.iot.webizing.org/room"><b>room</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">room number ex) L8321</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPFSCamera">IPFSCamera</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Text">schema:Text</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Text">schema:Text</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/snapShot">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/snapShot">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/snapShot"><b>snapShot</b></a>
+                        <a href="https://schema.iot.webizing.org/snapShot"><b>snapShot</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">url of the snap shot of the table</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/URL">schema:URL</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/URL">schema:URL</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/standHour">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/standHour">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/standHour"><b>standHour</b></a>
+                        <a href="https://schema.iot.webizing.org/standHour"><b>standHour</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">일어선 시간 - 1: 1시간, 0: 0시간</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/startDate">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/startDate">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/startDate"><b>startDate</b></a>
+                        <a href="https://schema.iot.webizing.org/startDate"><b>startDate</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">start time ex)2017-09-10T00:00:00+09:00</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/DateTime">schema:DateTime</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/DateTime">schema:DateTime</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/status">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/status">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/status"><b>status</b></a>
+                        <a href="https://schema.iot.webizing.org/status"><b>status</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">1:앉음, 0:일어섬</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Boolean">schema:Boolean</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Boolean">schema:Boolean</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/stepCount">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/stepCount">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/stepCount"><b>stepCount</b></a>
+                        <a href="https://schema.iot.webizing.org/stepCount"><b>stepCount</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">걸음 수</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Integer">schema:Integer</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Integer">schema:Integer</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/temp">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/temp">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/temp"><b>temp</b></a>
+                        <a href="https://schema.iot.webizing.org/temp"><b>temp</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">temperature - unit: Celsius(℃)</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/time">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/time">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/time"><b>time</b></a>
+                        <a href="https://schema.iot.webizing.org/time"><b>time</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">ex)"2017-05-30T18:54:20+09:00"</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPFSCamera">IPFSCamera</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/DateTime">schema:DateTime</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/DateTime">schema:DateTime</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/totalSleep">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/totalSleep">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/totalSleep"><b>totalSleep</b></a>
+                        <a href="https://schema.iot.webizing.org/totalSleep"><b>totalSleep</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">totalSleep time - unit: minute</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/user">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/user">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/user"><b>user</b></a>
+                        <a href="https://schema.iot.webizing.org/user"><b>user</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">format: firstName+LastName ex)jonghoLee, wanhoIm</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Sleep">Sleep</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/SmartTable">SmartTable</a>,
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/Cushion">Cushion</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartWatch">SmartWatch</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyMonitor">EnergyMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Sleep">Sleep</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/EnergyApplianceMonitor">EnergyApplianceMonitor</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/SmartTable">SmartTable</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/Cushion">Cushion</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPFSCamera">IPFSCamera</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Text">schema:Text</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Text">schema:Text</a>
                     </span>
                     <br />
                 </div>
             </li>
             <li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/voc">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/voc">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/voc"><b>voc</b></a>
+                        <a href="https://schema.iot.webizing.org/voc"><b>voc</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">휘발성 유기 화합물 - unit: ppb</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/AirQuality">AirQuality</a>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/AirQuality">AirQuality</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/Float">schema:Float</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Float">schema:Float</a>
                     </span>
                     <br />
                 </div>
             </li>
 			<li>
-                <div typeof="rdf:Property" resource="http://schema.iot.webizing.org/url">
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/url">
                     <span property="rdfs:label">
-                        <a href="http://schema.iot.webizing.org/url"><b>url</b></a>
+                        <a href="https://schema.iot.webizing.org/url"><b>url</b></a>
                     </span>
                     <br />
                     <span property="rdfs:comment">link to the video</span>
                     <br />
                     <span>
                         <b>Domain:</b>
-                        <a property="schema:domainIncludes" href="http://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPCamera">IPCamera</a>,
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPFSCamera">IPFSCamera</a>
                     </span>
                     <br />
                     <span>
                         <b>Range:</b>
-                        <a property="schema:rangeIncludes" href="http://schema.org/URL">schema:URL</a>
+                        <a property="schema:rangeIncludes" href="https://schema.org/URL">schema:URL</a>
+                    </span>
+                    <br />
+                </div>
+            </li>
+            <li>
+                <div typeof="rdf:Property" resource="https://schema.iot.webizing.org/hash">
+                    <span property="rdfs:label">
+                        <a href="https://schema.iot.webizing.org/hash"><b>hash</b></a>
+                    </span>
+                    <br />
+                    <span property="rdfs:comment">hash to the video file in the IPFS system</span>
+                    <br />
+                    <span>
+                        <b>Domain:</b>
+                        <a property="schema:domainIncludes" href="https://schema.iot.webizing.org/IPFSCamera">IPFSCamera</a>
+                    </span>
+                    <br />
+                    <span>
+                        <b>Range:</b>
+                        <a property="schema:rangeIncludes" href="https://schema.org/Text">schema:Text</a>
                     </span>
                     <br />
                 </div>

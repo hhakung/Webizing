@@ -1,0 +1,16 @@
+{ 
+"@context": "https://schema.iot.webizing.org/", 
+"@type": "SmartWatch", 
+"name": "Foobot00", 
+"user": "jonghoLee", 
+"address": "kist-l1", 
+"room": "L8321", 
+"location": "On the table", 
+"time": "2017-05-30T18:54:20+09:00", 
+"startDate": "2017-09-10T00:00:00+09:00", 
+"endDate": "2017-09-10T06:30:00+09:00", 
+"stepCount": "1830", 
+"heartRate": "115", 
+"exerciseTime": "95.5", 
+"standHour": "1.02" 
+}

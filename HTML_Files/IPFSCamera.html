@@ -5,7 +5,7 @@
                 rdfs: https://www.w3.org/2000/01/rdf-schema#" lang="en">
 <head>
 <meta https-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>SmartWatch</title>
+<title>IPFSCamera</title>
 <style>
     table, th, td {
         border: 1px solid black;
@@ -19,19 +19,21 @@
 </style>
 </head>
 <body>
-    <div id="content" typeof="rdfs:Class" resource="https://schema.iot.webizing.org/SmartWatch">
-        <h1 property="rdfs:label">SmartWatch</h1>
+    <div id="content" typeof="rdfs:Class" resource="https://schema.iot.webizing.org/IPFSCamera">
+        <h1 property="rdfs:label">IPFSCamera</h1>
         <span>Canonical URL: 
-            <a href="https://schema.iot.webizing.org/SmartWatch">https://schema.iot.webizing.org/SmartWatch</a>
+            <a href="https://schema.iot.webizing.org/IPFSCamera">https://schema.iot.webizing.org/IPFSCamera</a>
         </span>
-        <link property="schema:sameAs" href="https://schema.iot.webizing.org/SmartWatch" />
+        <link property="schema:sameAs" href="https://schema.iot.webizing.org/IPFSCamera" />
         <h4>
             <a href="https://schema.org/Thing" class="prefix-schema">schema:Thing</a>
             >
-            <a href="https://schema.iot.webizing.org/SmartWatch" class="prefix-schema">SmartWatch</a>
+            <a href="https://schema.iot.webizing.org/IPCamera" class="prefix-schema">IPCamera</a>
+            >
+            <a href="https://schema.iot.webizing.org/IPFSCamera" class="prefix-schema">IPFSCamera</a>
         </h4>
         <div property="rdfs:comment">
-            SmartWatch Sensor - 걸음 수, 심박, 운동시간, 일어서 있는 시간 로깅 ex)Fitbit, AppleWatch
+            IPFSCamera Sensor - video content from the IPFS Camera
         </div>
         <br />
         <table>
@@ -127,88 +129,32 @@
                         time at which the data measurement was made - ex)"2017-05-30T18:54:20+09:00"
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="https://schema.iot.webizing.org/startDate">
+				<tr typeof="rdf:Property" resource="https://schema.iot.webizing.org/url">
                     <td>
                         <span property="rdfs:label">
-                            <a href="https://schema.iot.webizing.org/startDate">startDate</a>
+                            <a href="https://schema.iot.webizing.org/url">url</a>
                         </span>
                     </td>
                     <td>
-                        <link property="schema:rangeIncludes" href="https://schema.org/DateTime" />
-                        <a href="https://schema.org/DateTime">schema:DateTime</a>
+                        <link property="schema:rangeIncludes" href="https://schema.org/URL" />
+                        <a href="https://schema.org/URL">schema:URL</a>
                     </td>
                     <td property="rdfs:comment">
-                        start time ex)2017-09-10T00:00:00+09:00
+                        link to the video
                     </td>
                 </tr>
-                <tr typeof="rdf:Property" resource="https://schema.iot.webizing.org/endDate">
+                <tr typeof="rdf:Property" resource="https://schema.iot.webizing.org/hash">
                     <td>
                         <span property="rdfs:label">
-                            <a href="https://schema.iot.webizing.org/endDate">endDate</a>
+                            <a href="https://schema.iot.webizing.org/hash">hash</a>
                         </span>
                     </td>
                     <td>
-                        <link property="schema:rangeIncludes" href="https://schema.org/DateTime" />
-                        <a href="https://schema.org/DateTime">schema:DateTime</a>
+                        <link property="schema:rangeIncludes" href="https://schema.org/Text" />
+                        <a href="https://schema.org/Text">schema:Text</a>
                     </td>
                     <td property="rdfs:comment">
-                        sleep end time ex)2017-09-10T06:30:00+09:00
-                    </td>
-                </tr>
-                <tr typeof="rdf:Property" resource="https://schema.iot.webizing.org/stepCount">
-                    <td>
-                        <span property="rdfs:label">
-                            <a href="https://schema.iot.webizing.org/stepCount">stepCount</a>
-                        </span>
-                    </td>
-                    <td>
-                        <link property="schema:rangeIncludes" href="https://schema.org/Integer" />
-                        <a href="https://schema.org/Integer">schema:Integer</a>
-                    </td>
-                    <td property="rdfs:comment">
-                        걸음 수
-                    </td>
-                </tr>
-                <tr typeof="rdf:Property" resource="https://schema.iot.webizing.org/heartRate">
-                    <td>
-                        <span property="rdfs:label">
-                            <a href="https://schema.iot.webizing.org/heartRate">heartRate</a>
-                        </span>
-                    </td>
-                    <td>
-                        <link property="schema:rangeIncludes" href="https://schema.org/Integer" />
-                        <a href="https://schema.org/Integer">schema:Integer</a>
-                    </td>
-                    <td property="rdfs:comment">
-                        심박수 - unit: count/min
-                    </td>
-                </tr>
-                <tr typeof="rdf:Property" resource="https://schema.iot.webizing.org/exerciseTime">
-                    <td>
-                        <span property="rdfs:label">
-                            <a href="https://schema.iot.webizing.org/exerciseTime">exerciseTime</a>
-                        </span>
-                    </td>
-                    <td>
-                        <link property="schema:rangeIncludes" href="https://schema.org/Float" />
-                        <a href="https://schema.org/Float">schema:Float</a>
-                    </td>
-                    <td property="rdfs:comment">
-                        운동시간 - unit: minute
-                    </td>
-                </tr>
-                <tr typeof="rdf:Property" resource="https://schema.iot.webizing.org/standHour">
-                    <td>
-                        <span property="rdfs:label">
-                            <a href="https://schema.iot.webizing.org/standHour">standHour</a>
-                        </span>
-                    </td>
-                    <td>
-                        <link property="schema:rangeIncludes" href="https://schema.org/Float" />
-                        <a href="https://schema.org/Float">schema:Float</a>
-                    </td>
-                    <td property="rdfs:comment">
-                        일어선 시간 - 1: 1시간, 0: 0시간
+                        hash to the video file in the IPFS system
                     </td>
                 </tr>
             </tbody>
@@ -219,19 +165,15 @@
             <p>
                 {   <br /> 
                     "@context": "https://schema.iot.webizing.org/", <br />
-                    "@type": "SmartWatch", <br />
+                    "@type": "IPFSCamera", <br />
                     "name": "Foobot00", <br />
                     "user": "jonghoLee", <br />
                     "address": "kist-l1", <br />
                     "room": "L8321", <br />
                     "location": "On the table", <br />
                     "time": "2017-05-30T18:54:20+09:00", <br />
-                    "startDate": "2017-09-10T00:00:00+09:00", <br />
-                    "endDate": "2017-09-10T06:30:00+09:00", <br />
-                    "stepCount": "1830", <br />
-                    "heartRate": "115", <br />
-                    "exerciseTime": "95.5", <br />
-                    "standHour": "1.02" <br />
+                    "url": "www.kist.videos/1" <br />
+                    "hash": "LKlasdfjloewLKDSF1239" <br />
                 }
             </p>
         </div>    

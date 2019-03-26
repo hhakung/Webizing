@@ -1,10 +1,10 @@
 {
   "@context": {
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "http://schema.org/",
-    "webiot": "http://schema.iot.webizing.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "https://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "webiot": "https://schema.iot.webizing.org/",
+    "xsd": "https://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
@@ -26,15 +26,15 @@
       }
     },
     {
-      "@id": "webiot:caloryList",
+      "@id": "webiot:pressure",
       "@type": "rdf:Property",
-      "rdfs:comment": "List of calories for the food items",
-      "rdfs:label": "caloryList",
+      "rdfs:comment": "unit is to be defined",
+      "rdfs:label": "pressure",
       "schema:domainIncludes": {
-        "@id": "webiot:SmartTable"
+        "@id": "webiot:Cushion"
       },
       "schema:rangeIncludes": {
-        "@id": "schema:ItemList"
+        "@id": "schema:Float"
       }
     },
     {
@@ -50,16 +50,33 @@
       }
     },
     {
+      "@id": "webiot:temp",
+      "@type": "rdf:Property",
+      "rdfs:comment": "temperature - unit: Celsius(℃)",
+      "rdfs:label": "temp",
+      "schema:domainIncludes": [
+        {
+          "@id": "webiot:Cushion"
+        },
+        {
+          "@id": "webiot:AirQuality"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "schema:Float"
+      }
+    },
+    {
       "@id": "webiot:endDate",
       "@type": "rdf:Property",
       "rdfs:comment": "sleep end time ex)2017-09-10T06:30:00+09:00",
       "rdfs:label": "endDate",
       "schema:domainIncludes": [
         {
-          "@id": "webiot:SmartWatch"
+          "@id": "webiot:Sleep"
         },
         {
-          "@id": "webiot:Sleep"
+          "@id": "webiot:SmartWatch"
         }
       ],
       "schema:rangeIncludes": {
@@ -91,20 +108,16 @@
       }
     },
     {
-      "@id": "",
-      "schema:softwareVersion": "WebIoT Version 1.0"
-    },
-    {
       "@id": "webiot:startDate",
       "@type": "rdf:Property",
       "rdfs:comment": "start time ex)2017-09-10T00:00:00+09:00",
       "rdfs:label": "startDate",
       "schema:domainIncludes": [
         {
-          "@id": "webiot:Sleep"
+          "@id": "webiot:SmartWatch"
         },
         {
-          "@id": "webiot:SmartWatch"
+          "@id": "webiot:Sleep"
         }
       ],
       "schema:rangeIncludes": {
@@ -136,18 +149,6 @@
       }
     },
     {
-      "@id": "webiot:pollution",
-      "@type": "rdf:Property",
-      "rdfs:comment": "unit is to be defined",
-      "rdfs:label": "pollution",
-      "schema:domainIncludes": {
-        "@id": "webiot:AirQuality"
-      },
-      "schema:rangeIncludes": {
-        "@id": "schema:Float"
-      }
-    },
-    {
       "@id": "webiot:alwaysOn",
       "@type": "rdf:Property",
       "rdfs:comment": "Standby Power - unit: W",
@@ -169,18 +170,13 @@
       }
     },
     {
-      "@id": "webiot:temp",
+      "@id": "webiot:pollution",
       "@type": "rdf:Property",
-      "rdfs:comment": "temperature - unit: Celsius(℃)",
-      "rdfs:label": "temp",
-      "schema:domainIncludes": [
-        {
-          "@id": "webiot:Cushion"
-        },
-        {
-          "@id": "webiot:AirQuality"
-        }
-      ],
+      "rdfs:comment": "unit is to be defined",
+      "rdfs:label": "pollution",
+      "schema:domainIncludes": {
+        "@id": "webiot:AirQuality"
+      },
       "schema:rangeIncludes": {
         "@id": "schema:Float"
       }
@@ -192,25 +188,31 @@
       "rdfs:label": "location",
       "schema:domainIncludes": [
         {
-          "@id": "webiot:AirQuality"
-        },
-        {
-          "@id": "webiot:SmartWatch"
-        },
-        {
-          "@id": "webiot:EnergyMonitor"
-        },
-        {
-          "@id": "webiot:Sleep"
+          "@id": "webiot:IPFSCamera"
         },
         {
           "@id": "webiot:EnergyApplianceMonitor"
+        },
+        {
+          "@id": "webiot:EnergyMonitor"
         },
         {
           "@id": "webiot:SmartTable"
         },
         {
           "@id": "webiot:Cushion"
+        },
+        {
+          "@id": "webiot:Sleep"
+        },
+        {
+          "@id": "webiot:AirQuality"
+        },
+        {
+          "@id": "webiot:IPCamera"
+        },
+        {
+          "@id": "webiot:SmartWatch"
         }
       ],
       "schema:rangeIncludes": {
@@ -224,10 +226,10 @@
       "rdfs:label": "activePower",
       "schema:domainIncludes": [
         {
-          "@id": "webiot:EnergyApplianceMonitor"
+          "@id": "webiot:SmartWatch"
         },
         {
-          "@id": "webiot:SmartWatch"
+          "@id": "webiot:EnergyApplianceMonitor"
         }
       ],
       "schema:rangeIncludes": {
@@ -241,22 +243,28 @@
       "rdfs:label": "address",
       "schema:domainIncludes": [
         {
+          "@id": "webiot:EnergyMonitor"
+        },
+        {
+          "@id": "webiot:EnergyApplianceMonitor"
+        },
+        {
+          "@id": "webiot:SmartWatch"
+        },
+        {
+          "@id": "webiot:IPFSCamera"
+        },
+        {
+          "@id": "webiot:AirQuality"
+        },
+        {
           "@id": "webiot:Cushion"
         },
         {
           "@id": "webiot:Sleep"
         },
         {
-          "@id": "webiot:SmartWatch"
-        },
-        {
-          "@id": "webiot:EnergyMonitor"
-        },
-        {
-          "@id": "webiot:AirQuality"
-        },
-        {
-          "@id": "webiot:EnergyApplianceMonitor"
+          "@id": "webiot:IPCamera"
         },
         {
           "@id": "webiot:SmartTable"
@@ -273,16 +281,22 @@
       "rdfs:label": "user",
       "schema:domainIncludes": [
         {
-          "@id": "webiot:Sleep"
+          "@id": "webiot:SmartWatch"
         },
         {
-          "@id": "webiot:SmartWatch"
+          "@id": "webiot:IPFSCamera"
         },
         {
           "@id": "webiot:Cushion"
         },
         {
           "@id": "webiot:AirQuality"
+        },
+        {
+          "@id": "webiot:Sleep"
+        },
+        {
+          "@id": "webiot:IPCamera"
         },
         {
           "@id": "webiot:SmartTable"
@@ -299,15 +313,15 @@
       }
     },
     {
-      "@id": "webiot:co2",
+      "@id": "webiot:hash",
       "@type": "rdf:Property",
-      "rdfs:comment": "이산화탄소 - unit: ppm",
-      "rdfs:label": "co2",
+      "rdfs:comment": "hash to the video file in the IPFS system",
+      "rdfs:label": "hash",
       "schema:domainIncludes": {
-        "@id": "webiot:AirQuality"
+        "@id": "webiot:IPFSCamera"
       },
       "schema:rangeIncludes": {
-        "@id": "schema:Number"
+        "@id": "schema:Text"
       }
     },
     {
@@ -317,25 +331,31 @@
       "rdfs:label": "time",
       "schema:domainIncludes": [
         {
-          "@id": "webiot:AirQuality"
-        },
-        {
-          "@id": "webiot:EnergyApplianceMonitor"
-        },
-        {
           "@id": "webiot:SmartTable"
         },
         {
           "@id": "webiot:SmartWatch"
         },
         {
-          "@id": "webiot:Sleep"
-        },
-        {
           "@id": "webiot:Cushion"
         },
         {
+          "@id": "webiot:AirQuality"
+        },
+        {
+          "@id": "webiot:EnergyApplianceMonitor"
+        },
+        {
           "@id": "webiot:EnergyMonitor"
+        },
+        {
+          "@id": "webiot:IPCamera"
+        },
+        {
+          "@id": "webiot:IPFSCamera"
+        },
+        {
+          "@id": "webiot:Sleep"
         }
       ],
       "schema:rangeIncludes": {
@@ -349,25 +369,69 @@
       "rdfs:label": "name",
       "schema:domainIncludes": [
         {
-          "@id": "webiot:AirQuality"
+          "@id": "webiot:SmartWatch"
         },
         {
           "@id": "webiot:Cushion"
         },
         {
+          "@id": "webiot:AirQuality"
+        },
+        {
           "@id": "webiot:Sleep"
         },
         {
-          "@id": "webiot:SmartWatch"
+          "@id": "webiot:IPCamera"
         },
         {
           "@id": "webiot:SmartTable"
         },
         {
+          "@id": "webiot:EnergyMonitor"
+        },
+        {
           "@id": "webiot:EnergyApplianceMonitor"
         },
         {
+          "@id": "webiot:IPFSCamera"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "webiot:room",
+      "@type": "rdf:Property",
+      "rdfs:comment": "room number ex) L8321",
+      "rdfs:label": "room",
+      "schema:domainIncludes": [
+        {
           "@id": "webiot:EnergyMonitor"
+        },
+        {
+          "@id": "webiot:IPCamera"
+        },
+        {
+          "@id": "webiot:IPFSCamera"
+        },
+        {
+          "@id": "webiot:Sleep"
+        },
+        {
+          "@id": "webiot:SmartTable"
+        },
+        {
+          "@id": "webiot:SmartWatch"
+        },
+        {
+          "@id": "webiot:Cushion"
+        },
+        {
+          "@id": "webiot:AirQuality"
+        },
+        {
+          "@id": "webiot:EnergyApplianceMonitor"
         }
       ],
       "schema:rangeIncludes": {
@@ -384,12 +448,12 @@
       }
     },
     {
-      "@id": "webiot:pressure",
+      "@id": "webiot:voc",
       "@type": "rdf:Property",
-      "rdfs:comment": "unit is to be defined",
-      "rdfs:label": "pressure",
+      "rdfs:comment": "휘발성 유기 화합물 - unit: ppb",
+      "rdfs:label": "voc",
       "schema:domainIncludes": {
-        "@id": "webiot:Cushion"
+        "@id": "webiot:AirQuality"
       },
       "schema:rangeIncludes": {
         "@id": "schema:Float"
@@ -405,15 +469,15 @@
       }
     },
     {
-      "@id": "webiot:url",
+      "@id": "webiot:co2",
       "@type": "rdf:Property",
-      "rdfs:comment": "link to the video",
-      "rdfs:label": "url",
+      "rdfs:comment": "이산화탄소 - unit: ppm",
+      "rdfs:label": "co2",
       "schema:domainIncludes": {
-        "@id": "webiot:IPCamera"
+        "@id": "webiot:AirQuality"
       },
       "schema:rangeIncludes": {
-        "@id": "schema:URL"
+        "@id": "schema:Number"
       }
     },
     {
@@ -462,6 +526,23 @@
       }
     },
     {
+      "@id": "webiot:url",
+      "@type": "rdf:Property",
+      "rdfs:comment": "link to the video",
+      "rdfs:label": "url",
+      "schema:domainIncludes": [
+        {
+          "@id": "webiot:IPFSCamera"
+        },
+        {
+          "@id": "webiot:IPCamera"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "schema:URL"
+      }
+    },
+    {
       "@id": "webiot:consumption",
       "@type": "rdf:Property",
       "rdfs:comment": "electric power consumption - unit: W",
@@ -486,27 +567,6 @@
       }
     },
     {
-      "@id": "webiot:voc",
-      "@type": "rdf:Property",
-      "rdfs:comment": "휘발성 유기 화합물 - unit: ppb",
-      "rdfs:label": "voc",
-      "schema:domainIncludes": {
-        "@id": "webiot:AirQuality"
-      },
-      "schema:rangeIncludes": {
-        "@id": "schema:Float"
-      }
-    },
-    {
-      "@id": "webiot:AirQuality",
-      "@type": "rdfs:Class",
-      "rdfs:comment": "AirQuality Sensor - 공기질 로깅 ex)Foobot(5분 주기로 데이터를 가져옴)",
-      "rdfs:label": "AirQuality",
-      "rdfs:subClassOf": {
-        "@id": "schema:Thing"
-      }
-    },
-    {
       "@id": "webiot:particle",
       "@type": "rdf:Property",
       "rdfs:comment": "pm2.5 - unit: ㎍/㎥",
@@ -516,6 +576,18 @@
       },
       "schema:rangeIncludes": {
         "@id": "schema:Float"
+      }
+    },
+    {
+      "@id": "webiot:caloryList",
+      "@type": "rdf:Property",
+      "rdfs:comment": "List of calories for the food items",
+      "rdfs:label": "caloryList",
+      "schema:domainIncludes": {
+        "@id": "webiot:SmartTable"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:ItemList"
       }
     },
     {
@@ -531,36 +603,26 @@
       }
     },
     {
-      "@id": "webiot:room",
-      "@type": "rdf:Property",
-      "rdfs:comment": "room number ex) L8321",
-      "rdfs:label": "room",
-      "schema:domainIncludes": [
-        {
-          "@id": "webiot:Cushion"
-        },
-        {
-          "@id": "webiot:SmartWatch"
-        },
-        {
-          "@id": "webiot:Sleep"
-        },
-        {
-          "@id": "webiot:EnergyMonitor"
-        },
-        {
-          "@id": "webiot:EnergyApplianceMonitor"
-        },
-        {
-          "@id": "webiot:SmartTable"
-        },
-        {
-          "@id": "webiot:AirQuality"
-        }
-      ],
-      "schema:rangeIncludes": {
-        "@id": "schema:Text"
+      "@id": "webiot:IPFSCamera",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "IPFSCamera Sensor - video content from the IPFS Camera",
+      "rdfs:label": "IPFSCamera",
+      "rdfs:subClassOf": {
+        "@id": "webiot:IPCamera"
       }
+    },
+    {
+      "@id": "httpss://schema.iot.webizing.org/AirQuality",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "AirQuality Sensor - 공기질 로깅 ex)Foobot(5분 주기로 데이터를 가져옴)",
+      "rdfs:label": "AirQuality",
+      "rdfs:subClassOf": {
+        "@id": "httpss://schema.org/Thing"
+      }
+    },
+    {
+      "@id": "",
+      "schema:softwareVersion": "WebIoT Version 1.0"
     },
     {
       "@id": "webiot:EnergyMonitor",

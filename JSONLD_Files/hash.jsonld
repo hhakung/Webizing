@@ -6,17 +6,19 @@
     "webiot": "https://schema.iot.webizing.org/",
     "xsd": "https://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "webiot:totalSleep",
+  "@id": "webiot:hash",
   "@type": "rdf:Property",
-  "rdfs:comment": "totalSleep time - unit: minute",
-  "rdfs:label": "totalSleep",
-  "schema:domainIncludes": {
-    "@id": "webiot:Sleep"
-  },
+  "rdfs:comment": "hash to the video file in the IPFS system",
+  "rdfs:label": "hash",
+  "schema:domainIncludes": [
+    {
+      "@id": "webiot:IPFSCamera"
+    }
+  ],
   "schema:rangeIncludes": {
-    "@id": "schema:Float"
+    "@id": "schema:Text"
   },
   "schema:sameAs": {
-    "@id": "webiot:totalSleep"
+    "@id": "webiot:hash"
   }
 }
