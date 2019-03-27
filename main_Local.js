@@ -6,17 +6,8 @@ var http = require("http"),
     fs = require("fs"),
     port = process.argv[2] || 3000;
 
-
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/schema.iot.webizing.org/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/schema.iot.webizing.org/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/schema.iot.webizing.org/chain.pem', 'utf8');
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
-
-https.createServer(credentials,function(request, response) {
+http.createServer(function(request, response) {
+  
   var accept = accepts(request),
       uri = url.parse(request.url).pathname;
 
