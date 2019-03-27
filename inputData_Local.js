@@ -1,6 +1,5 @@
 var fs = require('fs'),
-    request = require('request'),
-	https = require('https');
+    request = require('request');
 
 const IPFS = require('ipfs');
 const OrbitDB = require('orbit-db');
@@ -80,74 +79,90 @@ fs.readFile(filename, 'utf8', function(err, data) {
 
 	};
 
-	// Send a request to the vocabulary
-	request(options_vocab, function(error, response, body) {
-		console.log(response.headers['content-type']);
-
-		// convert the data into a JSON object
-		var parsed_vocab = JSON.parse(body);
-		console.log(parsed_vocab);
-
-		// create a JSON object to input
-		var inputJSON = {};
-
-		// Set the inputJSON properties using the properties in the JSONLD graph
-		var i;
-		for (i = 0; i < parsed_vocab['@graph'].length; i++) {
-			var item = parsed_vocab['@graph'][i];
-
-			if (item['@type'] == 'rdf:Property') {
-				var property = item['rdfs:label'];
-				// console.log('property: ' + item['rdfs:label']);
-
-				// if the property doesn't exist, put an empty string for the value of that property
-				if (!parsed_sensor.hasOwnProperty(property))
-				{
-					inputJSON[property] = "";
-
-				} else {
-					// otherwise, add the value from the parsed_sensor to the inputJSON to the corresponding field
-					inputJSON[property] = parsed_sensor[property];
-				}
-			}
-		}
-
-		console.log(inputJSON);
-
-		////////////////////////////////////////////////////////////////////////////////////////////////////////
-		// SET UP IPFS AND ORBIT-DB
-		////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-		// Create IPFS instance
-		const ipfs = new IPFS(ipfsOptions)
-
-		ipfs.on('error', (e) => console.error(e))
-		ipfs.on('ready', async () => {
-			let db;
+	// Make a function for getting the vocab data
+	function getVocabData(callback){
+		request(options_vocab, function(error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log(response.headers['content-type']);
+				// convert the data into a JSON object
+				var parsedData = JSON.parse(body);
+				return callback(null, parsedData);
 				
-			try {
-				// Create OrbitDB instance
-				const orbitdb = new OrbitDB(ipfs);
-					
-				// Create / Open a database
-				db = await orbitdb.eventlog('example', dbConfig);
-
-				// Add an entry
-				const hash = await db.add(inputJSON);
-				console.log(hash);
-
-				// Try getting that entry again, to verify that it's been added correctly to the db
-				const event = db.get(hash);
-				console.log(event);
-			} catch (e) {
-				console.error(e);
-				process.exit(1);
+			} else {
+				return callback(error, null);
 			}
 		});
+	};
+	
+	// Send a request to the vocabulary
+	getVocabData(function(err, parsed_vocab) {
+		if (!err) {
+			parsed_vocab = JSON.parse(parsed_vocab);
+			
+			// create a JSON object to input
+			var inputJSON = {};
+			
+			// set the inputJSON properties using the properties in the JSONLD graph
+			var i;
+			for (i = 0; i < parsed_vocab['@graph'].length; i++) {
+				var item = parsed_vocab['@graph'][i];
 
-		////////////////////////////////////////////////////////////////////////////////////////////////////////
-		// PUT THE VALIDATED JSON OBJECT INTO THE ORBIT-DB USING IPFS PUB-SUB
-		////////////////////////////////////////////////////////////////////////////////////////////////////////
+				if (item['@type'] == 'rdf:Property') {
+					var property = item['rdfs:label'];
+					// console.log('property: ' + item['rdfs:label']);
+
+					// if the property doesn't exist, put an empty string for the value of that property
+					if (!parsed_sensor.hasOwnProperty(property))
+					{
+						inputJSON[property] = "";
+
+					} else {
+						// otherwise, add the value from the parsed_sensor to the inputJSON to the corresponding field
+						inputJSON[property] = parsed_sensor[property];
+					}
+				}
+			}
+			
+			console.log(inputJSON);
+			
+			////////////////////////////////////////////////////////////////////////////////////////////////////////
+			// SET UP IPFS AND ORBIT-DB
+			////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			// Create IPFS instance
+			const ipfs = new IPFS(ipfsOptions)
+
+			ipfs.on('error', (e) => console.error(e))
+			ipfs.on('ready', async () => {
+				let db;
+				
+				try {
+					// Create OrbitDB instance
+					const orbitdb = new OrbitDB(ipfs);
+					
+					// Create / Open a database
+					db = await orbitdb.eventlog('example', dbConfig);
+
+					// Add an entry
+					const hash = await db.add(inputJSON);
+					console.log(hash);
+
+					// Try getting that entry again, to verify that it's been added correctly to the db
+					const event = db.get(hash);
+					console.log(event);
+				} catch (e) {
+					console.error(e);
+					process.exit(1);
+				}
+			});
+
+			////////////////////////////////////////////////////////////////////////////////////////////////////////
+			// PUT THE VALIDATED JSON OBJECT INTO THE ORBIT-DB USING IPFS PUB-SUB
+			////////////////////////////////////////////////////////////////////////////////////////////////////////
+			
+		} else {
+			console.log(err);
+		}
 	});
 });
 
