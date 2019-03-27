@@ -1,11 +1,11 @@
 # Webizing
 
 Using npm, install all the necessary node modules when running the files.
-(You can run the files without installing any node modules and see what the error says to find which modules to install; You will probably need to install orbit-db and ipfs for sure though: 
+You can run the files without installing any node modules and see what the error says to find which modules to install; You will probably need to install orbit-db and ipfs for sure though: 
 ```
 npm install orbit-db ipfs@0.33.0
 ```
-)
+
 
 ## Running the server on local
 
