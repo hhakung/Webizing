@@ -72,11 +72,6 @@ fs.readFile(filename, 'utf8', function(err, data) {
 		'url':     'http://localhost:3000/' + parsed_sensor['@type'],
 		'path':	 '/' + parsed_sensor['@type'],
 		'method':	'GET'
-		
-		// 'headers': {'Content-Type' : 'application/ld+json'},
-		// 'url':     hostnameString,
-		// 'method':  'GET'
-
 	};
 
 	// Make a function for getting the vocab data

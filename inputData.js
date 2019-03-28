@@ -1,5 +1,5 @@
 var fs = require('fs'),
-	https = require('https');
+    request = require('request');
 
 const IPFS = require('ipfs');
 const OrbitDB = require('orbit-db');
@@ -63,39 +63,40 @@ fs.readFile(filename, 'utf8', function(err, data) {
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// get the host name (URL) of the schema
-	var hostnameString = parsed_sensor['@context'].substring(8, parsed_sensor['@context'].length - 1);
+	var hostnameString = parsed_sensor['@context'] + parsed_sensor['@type'];
 	console.log(hostnameString);
-	console.log(parsed_sensor['@type']);
 
 	// set the options for a HTTP request; for getting a JSON object back
 	const options_vocab = {
-		'hostname': hostnameString,
-		'path': '/' + parsed_sensor['@type'],
-		'headers': {
-			'Content-Type': 'application/ld+json'
-		}
+		 'headers': {'Content-Type' : 'application/ld+json'},
+		 'url':     hostnameString,
+		 'method':  'GET'
 	};
 
-	// Send a HTTP GET request to the vocabulary
-	https.get(options_vocab, function(res_vocab) {
-		console.log(res_vocab.headers['content-type']);
-		
-		// Accumulate data until all the data has been received
-		var body_vocab = '';
-		res_vocab.on('data', function(chunk) {
-			body_vocab += chunk;
+	// Make a function for getting the vocab data
+	function getVocabData(callback){
+		request(options_vocab, function(error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log(response.headers['content-type']);
+				// convert the data into a JSON object
+				var parsedData = JSON.parse(body);
+				return callback(null, parsedData);
+				
+			} else {
+				return callback(error, null);
+			}
 		});
-
-		// If we are done receiving all the data, first, convert the data into a JSON object
-		res_vocab.on('end', function() {
-			// convert the data into a JSON object
-			var parsed_vocab = JSON.parse(body_vocab);
-			// console.log('Vocab data received: ' + body_vocab);
-
+	};
+	
+	// Send a request to the vocabulary
+	getVocabData(function(err, parsed_vocab) {
+		if (!err) {
+			parsed_vocab = JSON.parse(parsed_vocab);
+			
 			// create a JSON object to input
 			var inputJSON = {};
-
-			// Set the inputJSON properties using the properties in the JSONLD graph
+			
+			// set the inputJSON properties using the properties in the JSONLD graph
 			var i;
 			for (i = 0; i < parsed_vocab['@graph'].length; i++) {
 				var item = parsed_vocab['@graph'][i];
@@ -115,9 +116,9 @@ fs.readFile(filename, 'utf8', function(err, data) {
 					}
 				}
 			}
-
+			
 			console.log(inputJSON);
-
+			
 			////////////////////////////////////////////////////////////////////////////////////////////////////////
 			// SET UP IPFS AND ORBIT-DB
 			////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -152,8 +153,10 @@ fs.readFile(filename, 'utf8', function(err, data) {
 			////////////////////////////////////////////////////////////////////////////////////////////////////////
 			// PUT THE VALIDATED JSON OBJECT INTO THE ORBIT-DB USING IPFS PUB-SUB
 			////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-		});
+			
+		} else {
+			console.log(err);
+		}
 	});
 });
 
